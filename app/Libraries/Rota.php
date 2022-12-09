@@ -45,7 +45,7 @@ class Rota
         call_user_func_array([$this->controlador, $this->metodo], $this->parametros);
     }
 
-    // retorna a url em um array
+        // retorna a url em um array
     private function url()
     {
         //o filtro FILTER_SANITIZE_URL remove todos os caracteres ilegais de uma URL

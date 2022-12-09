@@ -6,14 +6,14 @@
 class Controller
 {
 
-    //carrega os modelos
+        //carrega os modelos
     public function model($model)
     {
         require_once '../app/Models/' . $model . '.php';
         return new $model;
     }
 
-    //carrega as views
+        //carrega as views
     public function view($view, $dados = [])
     {
         $arquivo = ('../app/Views/' . $view . '.php');

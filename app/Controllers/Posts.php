@@ -1,5 +1,5 @@
 <?php
 
-class Posts {
-    
+class Posts
+{
 }
