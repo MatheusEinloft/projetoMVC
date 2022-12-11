@@ -12,7 +12,7 @@ class Paginas extends Controller
         //ele puxa o metodo view da controller que esta sendo extendida na class, passa os parametros dentro do " () " e o mesmo ira validar 
         $this->view('paginas/home', $dados);
     }
-//teste git
+
     public function sobre()
     {
         $dados = [
