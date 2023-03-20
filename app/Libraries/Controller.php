@@ -24,7 +24,7 @@ class Controller
             die('O arquivo de view não existe!');
         endif;
     }
-
+//teste para o github
     public function calculadora($primeiroValor, $segundoValor){
         $primeiroValor;
     }
