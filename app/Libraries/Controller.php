@@ -23,7 +23,7 @@ class Controller
         else :
             die('O arquivo de view não existe!');
         endif;
-    }~;
+    }
 
     public function calculadora($primeiroValor, $segundoValor){
         $primeiroValor;
