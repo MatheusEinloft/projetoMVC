@@ -34,15 +34,4 @@ class Controller
         
     }
     
-    public function darkMode($dark){
-        
-        if($dark == true){
-            return self::dark();
-        }
-
-        if($dark == false){
-            return self::white();
-        }
-
-    }
 }

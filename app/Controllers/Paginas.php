@@ -55,7 +55,15 @@ class Paginas extends Controller
         $this->view($dados);
     }
 
-    public function darkMode($on = true){
+    public function darkMode($dark =  false){
         
+        if($dark == true){
+            return self::dark();
+        }
+
+        if($dark == false){
+            return self::white();
+        }
+
     }
 }
