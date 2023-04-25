@@ -2,6 +2,9 @@
 include './../app/config.php';
 include './../app/Libraries/Rota.php';
 include './../app/Libraries/Controller.php';
+include './../app/Libraries/Database.php';
+$db = new Database;
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
