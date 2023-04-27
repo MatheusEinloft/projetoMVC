@@ -5,6 +5,20 @@ include './../app/Libraries/Controller.php';
 include './../app/Libraries/Database.php';
 $db = new Database;
 
+$usuario = 10;
+$titulo = 'titulo do post';
+$texto = 'textp do post';
+
+$db->query("INSERT INTO posts (usuario_id, titulo, texto) VALUES (:usuario_id, :titulo, :texto)");
+$db->bind(":usuario", $usuarioId);
+$db->bind(":titulo", $titulo);
+$db->bind(":texto", $texto);
+
+$db->exec();
+
+echo '<hr>Total resultados: ' . $db->totalResults();
+echo '<hr>Ultimo id: ' . $db->ultimoIdInserido();
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">

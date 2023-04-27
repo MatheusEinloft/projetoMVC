@@ -2,7 +2,7 @@
 
 class Database {
 
-    private $host = '172.17.0.3';
+    private $host = '172.17.0.2';
     private $db = 'projetomvc';
     private $user = 'root';
     private $password = 'root';
@@ -31,7 +31,7 @@ class Database {
         $this->stmt = $this->dbh->prepare($sql);
     }
 
-    public function bind($parametro, $valor, $tipo)
+    public function bind($parametro, $valor, $tipo = null)
     {
         if(is_null($tipo)){
             switch(true){
@@ -74,14 +74,14 @@ class Database {
         return $this->stmt->fetchAll(PDO::FETCH_OBJ);
     }
 
-    public function totalResulss()
+    public function totalResults()
     {
         return $this->stmt->rowCount();
     }
 
     public function ultimoIdInserido()
     {
-        return $this->stmt->lastInsertId();
+        return $this->dbh->lastInsertId();
     }
 
 }   
