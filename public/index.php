@@ -7,17 +7,17 @@ $db = new Database;
 
 $usuario = 10;
 $titulo = 'titulo do post';
-$texto = 'textp do post';
+$texto = 'texto do post';
 
 $db->query("INSERT INTO posts (usuario_id, titulo, texto) VALUES (:usuario_id, :titulo, :texto)");
-$db->bind(":usuario", $usuarioId);
+$db->bind(":usuario_id", $usuarioId);
 $db->bind(":titulo", $titulo);
 $db->bind(":texto", $texto);
 
 $db->exec();
 
 echo '<hr>Total resultados: ' . $db->totalResults();
-echo '<hr>Ultimo id: ' . $db->ultimoIdInserido();
+echo '<hr>Ultimo id: ' . $db->lastIdInsert();
 
 ?>
 <!DOCTYPE html>

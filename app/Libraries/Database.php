@@ -79,7 +79,7 @@ class Database {
         return $this->stmt->rowCount();
     }
 
-    public function ultimoIdInserido()
+    public function lastIdInsert()
     {
         return $this->dbh->lastInsertId();
     }
