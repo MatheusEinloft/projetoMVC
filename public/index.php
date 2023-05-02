@@ -5,19 +5,23 @@ include './../app/Libraries/Controller.php';
 include './../app/Libraries/Database.php';
 $db = new Database;
 
-$usuarioId = 1;
-$titulo = 'titulo do post 2';
-$texto = 'texto do post 2';
+$id = 5;
+$usuarioId = 5;
+$titulo = 'Titulo do post 5';
+$texto = 'texto do post 5';
+$criadoEm = date('Y-m-d H:i:s');
 
-$db->query("UPDATE posts SET usuario_id = :usuario_id, titulo = :titulo, texto = :texto");
+$db->query("UPDATE posts SET usuario_id = :usuario_id, titulo = :titulo, texto = :texto, criado_em = :criadoEm WHERE id = :id ");
+
+$db->bind(":id", $id);
 $db->bind(":usuario_id", $usuarioId);
 $db->bind(":titulo", $titulo);
 $db->bind(":texto", $texto);
+$db->bind(":criadoEm", $criadoEm);
 
 $db->exec();
 
 echo '<hr>Total resultados: ' . $db->totalResults();
-echo '<hr>Ultimo id: ' . $db->lastIdInsert();
 
 ?>
 <!DOCTYPE html>
