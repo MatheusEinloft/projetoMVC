@@ -5,11 +5,11 @@ include './../app/Libraries/Controller.php';
 include './../app/Libraries/Database.php';
 $db = new Database;
 
-$usuario = 10;
-$titulo = 'titulo do post';
-$texto = 'texto do post';
+$usuarioId = 1;
+$titulo = 'titulo do post 2';
+$texto = 'texto do post 2';
 
-$db->query("INSERT INTO posts (usuario_id, titulo, texto) VALUES (:usuario_id, :titulo, :texto)");
+$db->query("UPDATE posts SET usuario_id = :usuario_id, titulo = :titulo, texto = :texto");
 $db->bind(":usuario_id", $usuarioId);
 $db->bind(":titulo", $titulo);
 $db->bind(":texto", $texto);
