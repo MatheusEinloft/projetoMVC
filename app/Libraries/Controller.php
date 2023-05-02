@@ -24,14 +24,4 @@ class Controller
             die('O arquivo de view não existe!');
         endif;
     }
-    
-    //todo: criar o restante das funções, colocar as funções dark e white na controller ou verificar o lugar adequado para elas
-    public static function dark(){
-
-    }
-
-    public static function white(){
-        
-    }
-    
 }
