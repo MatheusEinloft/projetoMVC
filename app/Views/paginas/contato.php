@@ -36,8 +36,6 @@
             </div>
             <div class="form-group col-md-2">
                 <label for="inputCEP">CEP</label>
-                //TODO:
-                //COLOCAR O CEP NA MASCARA CORRETA, PARA IR PREENCHENDO O NUMERO COM O FORMATO SE AJUSTANDO AUTOMATICAMENTE
                 <input type="text" class="form-control" id="inputCEP">
             </div>
         </div>
@@ -45,9 +43,6 @@
             <div class="form-check">
                 <input class="form-check-input" type="checkbox" id="gridCheck">
                 <label class="form-check-label" for="gridCheck">
-                    Aceito os termos
-                    //TODO:
-                    //COLOCAR UMA PAGINA PARA MOSTRAR OS TERMOS DINAMICO E COLOCAR QUALQUER TEXTO DE EXEMPLO
                 </label>
             </div>
         </div>

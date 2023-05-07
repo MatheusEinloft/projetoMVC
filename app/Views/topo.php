@@ -9,6 +9,7 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
+                        
                         <li class="nav-item">
                             <a class="nav-link" href="<?= URL ?>" data-tooltip="tooltip" title="home">Home</a>
                         </li>
@@ -21,12 +22,10 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#" data-tooltip="tooltip" title="darkmode">Dark Mode</a>
                         </li>
-                        //TODO:
-                        //COLOCAR NOVAS PAGINAS E PRATICAR
-                        //COLOCAR ICONE DARK MODE
+                        
                     </ul>
                     <span class="navbar-text">
-                        <a class="btn btn-info" href="#" data-tooltip="tooltip" title="Não tem uma conta? Cadastre-se">Cadastre-se</a>
+                        <a class="btn btn-info" href="<?= URL ?>public/usuarios/cadastrar" data-tooltip="tooltip" title="Não tem uma conta? Cadastre-se">Cadastre-se</a>
                         <a class="btn btn-info" href="#" data-tooltip="tooltip" title="Tem uma conta? Faça login">Entrar</a>
                     </span>
                 </div>
