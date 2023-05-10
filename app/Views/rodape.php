@@ -8,7 +8,3 @@
         </small>
     </div>
 </footer>
-
-//TODO 
-//deixar o rodapé mais dinamico
-//colocar redes sociais
