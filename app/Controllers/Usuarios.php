@@ -12,6 +12,31 @@ class Usuarios extends Controller {
                 'senha' => trim($formulario['senha']),
                 'confirma_senha' => trim($formulario['confirma_senha']),
             ];   
+
+            if(empty($formulario['nome'])){
+                $dados['nome_erro'] =  'Preencha o campo nome';
+            }
+
+            if(empty($formulario['email'])){
+                $dados['email_erro'] =  'Preencha o campo email';
+            }
+
+            if(empty($formulario['senha'])){
+                $dados['senha_erro'] =  'Preencha o campo senha';
+            } elseif (strlen($formulario['senha'] < 6)) {
+                $dados['senha_erro'] =  'A senha deve ter no minimo 6 caracteres';
+            }
+
+            if(empty($formulario['confirma_senha'])){
+                $dados['confirma_senha_erro'] =  'Confirme a senha';
+            } elseif ($formulario['confirma_senha'] != $formulario['senha']) {
+                $dados['confirma_senha_erro'] =  'As duas senhas precisam ser iguais';
+            }
+
+            if(!in_array("", $formulario)){
+                echo 'Pode realizar o cadastro';
+            }
+
         } else {
             $dados = [
                 'nome' => '',
