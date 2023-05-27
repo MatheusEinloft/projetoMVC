@@ -33,14 +33,6 @@ class Usuarios extends Controller {
                 $dados['confirma_senha_erro'] =  'As duas senhas precisam ser iguais';
             }
 
-            if(Checa::checarNome($formulario['nome'])){
-                $dados['nome_erro'] = 'O nome informado é invalido';
-            }
-
-            if(Checa::checarEmail($formulario['email'])){
-                $dados['email_erro'] = 'O email informado é invalido';
-            }
-
             if(!in_array("", $formulario)){
                 echo 'Pode realizar o cadastro';
             }
@@ -53,8 +45,7 @@ class Usuarios extends Controller {
                 'confirma_senha' => '',
             ];
         }
-    //todo
-    //criar um token para esse usuario que foi cadastrado, assim todas as vezes que ele solicitar alguma requisição, iremos utilizar o token dele para liberar os acessos        
+        
         $this->view('usuarios/cadastrar', $dados);
     }
 }
